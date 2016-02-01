@@ -19,7 +19,7 @@ namespace BadaoKingdom.BadaoChampion.BadaoJhin
 
         private static void Game_OnUpdate(EventArgs args)
         {
-            if (BadaoJhinHelper.UseRAuto() && ObjectManager.Player.IsCastingInterruptableSpell())
+            if (BadaoJhinHelper.UseRAuto()/* && ObjectManager.Player.IsCastingInterruptableSpell()*/)
             {
                 Game.PrintChat("1");
                 var target = TargetSelector.GetTarget(BadaoMainVariables.R.Range, TargetSelector.DamageType.Physical,
