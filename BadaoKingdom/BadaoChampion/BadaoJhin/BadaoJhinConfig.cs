@@ -22,7 +22,7 @@ namespace BadaoKingdom.BadaoChampion.BadaoJhin
             BadaoMainVariables.W.MinHitChance = HitChance.Medium;
             BadaoMainVariables.E = new Spell(SpellSlot.E, 750); // radius 260
             BadaoMainVariables.R = new Spell(SpellSlot.R, 3500);
-            BadaoMainVariables.R.SetSkillshot(0.2f, 100, 5000, false, SkillshotType.SkillshotLine);
+            BadaoMainVariables.R.SetSkillshot(0.45f, 100, 5000, false, SkillshotType.SkillshotLine);
             BadaoMainVariables.R.MinHitChance = HitChance.Medium;
 
             // main menu
