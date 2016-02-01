@@ -18,10 +18,12 @@ namespace BadaoKingdom.BadaoChampion.BadaoJhin
             // spells init
             BadaoMainVariables.Q = new Spell(SpellSlot.Q, 600);
             BadaoMainVariables.W = new Spell(SpellSlot.W, 2500);
-            BadaoMainVariables.W.SetSkillshot(0.75f, 100, float.MaxValue,true, SkillshotType.SkillshotLine);
+            BadaoMainVariables.W.SetSkillshot(1f, 100, float.MaxValue,true, SkillshotType.SkillshotLine);
+            BadaoMainVariables.W.MinHitChance = HitChance.Medium;
             BadaoMainVariables.E = new Spell(SpellSlot.E, 750); // radius 260
             BadaoMainVariables.R = new Spell(SpellSlot.R, 3500);
             BadaoMainVariables.R.SetSkillshot(0.2f, 100, 5000, false, SkillshotType.SkillshotLine);
+            BadaoMainVariables.R.MinHitChance = HitChance.Medium;
 
             // main menu
             config = new Menu("BadaoKingdom " + ObjectManager.Player.ChampionName, ObjectManager.Player.ChampionName, true);
