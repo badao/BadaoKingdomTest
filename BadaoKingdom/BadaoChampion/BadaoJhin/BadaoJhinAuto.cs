@@ -21,6 +21,7 @@ namespace BadaoKingdom.BadaoChampion.BadaoJhin
         {
             if (BadaoJhinHelper.UseRAuto() && ObjectManager.Player.IsCastingInterruptableSpell())
             {
+                Game.PrintChat("1");
                 var target = TargetSelector.GetTarget(BadaoMainVariables.R.Range, TargetSelector.DamageType.Physical,
                     true, HeroManager.Enemies.Where(x => x.IsValid && !BadaoChecker.BadaoInTheCone(
                          x.Position.To2D(), ObjectManager.Player.Position.To2D(),
@@ -28,6 +29,7 @@ namespace BadaoKingdom.BadaoChampion.BadaoJhin
                          + ObjectManager.Player.Direction.To2D().Normalized().Perpendicular() * BadaoMainVariables.R.Range, 60)));
                 if (target.BadaoIsValidTarget())
                 {
+                    Game.PrintChat("2");
                     BadaoMainVariables.R.Cast(target);
                 }
             }
