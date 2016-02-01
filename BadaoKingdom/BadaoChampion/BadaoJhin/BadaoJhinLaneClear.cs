@@ -21,7 +21,7 @@ namespace BadaoKingdom.BadaoChampion.BadaoJhin
         {
             if (BadaoMainVariables.Orbwalker.ActiveMode != Orbwalking.OrbwalkingMode.LaneClear)
                 return;
-            if (ObjectManager.Player.IsCastingInterruptableSpell())
+            if (BadaoMainVariables.R.Instance.SData.Name == "JhinRShot")
                 return;
             if (!BadaoJhinHelper.CanLaneClearMana())
                 return;

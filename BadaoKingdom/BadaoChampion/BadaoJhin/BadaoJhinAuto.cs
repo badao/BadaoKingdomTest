@@ -20,7 +20,7 @@ namespace BadaoKingdom.BadaoChampion.BadaoJhin
         private static void Game_OnUpdate(EventArgs args)
         {
             //JhinR
-            if (BadaoJhinHelper.UseRAuto() && BadaoMainVariables.R.Instance.SData.Name == "JhinRShot" /* && ObjectManager.Player.IsCastingInterruptableSpell()*/)
+            if (BadaoJhinHelper.UseRAuto() && BadaoMainVariables.R.Instance.SData.Name == "JhinRShot")
             {
                 var target = TargetSelector.GetTarget(BadaoMainVariables.R.Range, TargetSelector.DamageType.Physical,
                     true, HeroManager.Enemies.Where(x => x.IsValid && !BadaoChecker.BadaoInTheCone(
@@ -29,11 +29,10 @@ namespace BadaoKingdom.BadaoChampion.BadaoJhin
                          + ObjectManager.Player.Direction.To2D().Normalized().Perpendicular() * BadaoMainVariables.R.Range, 60)));
                 if (target.BadaoIsValidTarget())
                 {
-                    Game.PrintChat("2");
                     BadaoMainVariables.R.Cast(target);
                 }
             }
-            if (ObjectManager.Player.IsCastingInterruptableSpell())
+            if (BadaoMainVariables.R.Instance.SData.Name == "JhinRShot")
                 return;
             if (BadaoJhinHelper.UseAutoKS())
             {

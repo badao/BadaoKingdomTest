@@ -23,7 +23,7 @@ namespace BadaoKingdom.BadaoChampion.BadaoJhin
         {
             if (BadaoMainVariables.Orbwalker.ActiveMode != Orbwalking.OrbwalkingMode.Mixed)
                 return;
-            if (ObjectManager.Player.IsCastingInterruptableSpell())
+            if (BadaoMainVariables.R.Instance.SData.Name == "JhinRShot")
                 return;
         }
 
@@ -31,7 +31,7 @@ namespace BadaoKingdom.BadaoChampion.BadaoJhin
         {
             if (BadaoMainVariables.Orbwalker.ActiveMode != Orbwalking.OrbwalkingMode.Mixed)
                 return;
-            if (ObjectManager.Player.IsCastingInterruptableSpell())
+            if (BadaoMainVariables.R.Instance.SData.Name == "JhinRShot")
                 return;
             if (!BadaoJhinHelper.CanHarassMana())
                 return;
