@@ -1,0 +1,9 @@
+Poppy Tweak/Feature List 27.12.2015
+
+R Overkill Check(so you don't use ult too fast
+Laneclear with Q (slider for amount of minions hit with Q).
+E and Q Killsteal Options.
+Jungleclear with E (Option to E small jungle camps or only big).
+Maybe optimize E logic for more stuns :P.
+
+Possibly add drawings that show E range(so you know when/where they can be wallstunned.
