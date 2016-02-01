@@ -19,8 +19,8 @@ namespace BadaoKingdom.BadaoChampion.BadaoJhin
 
         private static void Game_OnUpdate(EventArgs args)
         {
-            Game.PrintChat(BadaoMainVariables.R.Instance.SData.Name);
-            if (BadaoJhinHelper.UseRAuto()/* && ObjectManager.Player.IsCastingInterruptableSpell()*/)
+            //JhinR
+            if (BadaoJhinHelper.UseRAuto() && BadaoMainVariables.R.Instance.SData.Name == "JhinRShot" /* && ObjectManager.Player.IsCastingInterruptableSpell()*/)
             {
                 var target = TargetSelector.GetTarget(BadaoMainVariables.R.Range, TargetSelector.DamageType.Physical,
                     true, HeroManager.Enemies.Where(x => x.IsValid && !BadaoChecker.BadaoInTheCone(
